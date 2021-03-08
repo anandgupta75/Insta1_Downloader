@@ -22,14 +22,14 @@ driver1.get('https://www.instagram.com/accounts/login/')
 last_height=driver1.execute_script("return document.documentElement.scrollHeight")
 time.sleep(5)
 driver2=driver1.find_element_by_xpath('//*[@id="loginForm"]/div[1]/div[1]/div/label/input')
-driver2.send_keys('rwsxgd7362@559ai.com')
+driver2.send_keys(sys.argv[1])
 time.sleep(2)
 driver3=driver1.find_element_by_xpath('//*[@id="loginForm"]/div[1]/div[2]/div/label/input')
 time.sleep(2)
-driver3.send_keys('7021565711')
+driver3.send_keys(sys.argv[2])
 driver4=driver1.find_element_by_xpath('//*[@id="loginForm"]/div[1]/div[3]').click()
 time.sleep(6)
-driver1.get('https://www.instagram.com/emilia_clarke/')
+driver1.get(sys.argv[3])
 links=[]
 links2=[]
 while True:
