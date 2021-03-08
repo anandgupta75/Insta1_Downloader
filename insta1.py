@@ -8,16 +8,16 @@ import uuid
 import sys
 header={"User_Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"}
 #driver_path="C:\Users\Arun\Downloads\Compressed\chromedriver_win32\chromedriver"
-r1=requests.get("https://www.instagram.com/p/CLJxKzbF7Ji/",headers=header)
+#r1=requests.get("https://www.instagram.com/p/CLJxKzbF7Ji/",headers=header)
 #print(r1.text)
 chrome_options = Options()
-#chrome_options.add_argument('--headless')
+chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 driver1=webdriver.Chrome(executable_path='./chromedriver',chrome_options=chrome_options)
 SCROLL_PAUSE_TIME = 5
 
-#driver1.get('https://www.instagram.com/emilia_clarke/')
+driver1.get('https://www.instagram.com/emilia_clarke/')
 driver1.get('https://www.instagram.com/accounts/login/')
 last_height=driver1.execute_script("return document.documentElement.scrollHeight")
 time.sleep(5)
