@@ -11,7 +11,7 @@ header={"User_Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.
 #r1=requests.get("https://www.instagram.com/p/CLJxKzbF7Ji/",headers=header)
 #print(r1.text)
 chrome_options = Options()
-chrome_options.add_argument('--headless')
+#chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 driver1=webdriver.Chrome(executable_path='./chromedriver',chrome_options=chrome_options)
